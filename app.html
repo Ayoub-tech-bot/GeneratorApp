@@ -1265,8 +1265,8 @@ async function api(method, path, body) {
     return data;
   } catch (err) {
     console.warn("API Error (Demo Mode Bypass):", path);
-    if (path.includes('/auth/me')) return { user: { id: 1, username: 'Invite', role: 'admin', schoolName: 'Demo Client' }, usageToday: { tokensUsed: 0, exercisesCount: 0 } };
-    if (path.includes('/auth/login')) return { token: 'demo', user: { id: 1, username: 'Invite', role: 'admin', schoolName: 'Demo Client' }, usageToday: { tokensUsed: 0, exercisesCount: 0 } };
+    if (path.includes('/auth/me')) return { user: { id: 1, username: 'Invite', role: 'admin', schoolName: 'Demo' }, usageToday: { tokensUsed: 0, exercisesCount: 0 } };
+    if (path.includes('/auth/login')) return { token: 'demo', user: { id: 1, username: 'Invite', role: 'admin', schoolName: 'Demo' }, usageToday: { tokensUsed: 0, exercisesCount: 0 } };
     if (path.includes('/catalogue')) return { catalogue: typeof PLAN !== 'undefined' ? PLAN.catalogue : [] };
     if (path.includes('/programme')) return { programme: typeof PLAN !== 'undefined' ? PLAN.programme : [] };
     if (path.includes('/users')) return { users: [] };
