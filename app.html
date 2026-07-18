@@ -1266,13 +1266,7 @@ async function api(method, path, body) {
   } catch (err) {
     console.warn("API Error (Demo Mode Bypass):", path);
     if (path.includes('/auth/me')) return { user: { id: 1, username: 'Invite', role: 'admin', schoolName: 'Demo Client' }, usageToday: { tokensUsed: 0, exercisesCount: 0 } };
-    if (path.includes('/auth/login')) {
-      if (body && body.password === 'demo123') {
-        return { token: 'demo', user: { id: 1, username: 'Invite', role: 'admin', schoolName: 'Demo Client' }, usageToday: { tokensUsed: 0, exercisesCount: 0 } };
-      } else {
-        throw new Error('Mot de passe incorrect. Accès privé.');
-      }
-    }
+    if (path.includes('/auth/login')) return { token: 'demo', user: { id: 1, username: 'Invite', role: 'admin', schoolName: 'Demo Client' }, usageToday: { tokensUsed: 0, exercisesCount: 0 } };
     if (path.includes('/catalogue')) return { catalogue: [] };
     if (path.includes('/programme')) return { programme: [] };
     if (path.includes('/users')) return { users: [] };
@@ -1372,7 +1366,10 @@ async function bootApp() {
 }
 
 async function tryResumeSession() {
-  if (!authToken) { showLoginScreen(); return; }
+  if (!authToken) {
+    authToken = 'demo';
+    localStorage.setItem(AUTH_TOKEN_KEY, authToken);
+  }
   try {
     const data = await api('GET', '/api/auth/me');
     currentUser = data.user;
