@@ -1,0 +1,194 @@
+============================================================
+Serveur sur http://0.0.0.0:8765  (backend par defaut: cli)
+Accessible depuis les autres machines du reseau local sur http://<IP-de-ce-poste>:8765
+Laisse cette fenetre ouverte pendant que l'equipe utilise l'application.
+Ctrl+C pour arreter.
+============================================================
+[server] "GET / HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51581)
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\http\server.py", line 424, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Utilisateur\Desktop\new version\Generateur-cours-Salma_New\build\server.py", line 328, in do_GET
+    self._serve_app_html()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Utilisateur\Desktop\new version\Generateur-cours-Salma_New\build\server.py", line 403, in _serve_app_html
+    self._write_body(200, "text/html; charset=utf-8", body)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\new version\Generateur-cours-Salma_New\build\server.py", line 288, in _write_body
+    self.wfile.write(body[offset:offset + chunk_size])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 840, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+----------------------------------------
+[server] "GET / HTTP/1.1" 200 -
+[server] "GET / HTTP/1.1" 200 -
+[server] "POST /api/auth/login HTTP/1.1" 200 -
+[server] "GET /api/programme HTTP/1.1" 200 -
+[server] "GET /api/catalogue HTTP/1.1" 200 -
+[server] "GET /api/users HTTP/1.1" 200 -
+[server] "GET /api/users HTTP/1.1" 200 -
+[server] "GET /api/users HTTP/1.1" 200 -
+[server] "GET /api/users HTTP/1.1" 200 -
+[server] "GET /api/users HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices HTTP/1.1" 200 -
+[server] "POST /api/generate HTTP/1.1" 200 -
+[server] "POST /api/generate HTTP/1.1" 200 -
+[server] "POST /api/generate HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices/remove HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=5ec99975a2644bb184a964a3966c051f HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices/remove HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=f8874deda76348ba88d6e5b99168218b HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices/remove HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=08b335f544a54cdfa8523f1e1c15a45e HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices/remove HTTP/1.1" 200 -
+[server] "GET /api/ping HTTP/1.1" 200 -
+[server] "GET /api/ping HTTP/1.1" 200 -
+[server] "GET /api/users HTTP/1.1" 200 -
+[server] "GET /api/users HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices HTTP/1.1" 200 -
+[server] "POST /api/generate HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=9e2f65d73ea642e6a4490adeccb61738 HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices/remove HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices HTTP/1.1" 200 -
+[server] "POST /api/generate HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=378d7ef6c277488cb139add17a66ec43 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=378d7ef6c277488cb139add17a66ec43 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=378d7ef6c277488cb139add17a66ec43 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=378d7ef6c277488cb139add17a66ec43 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=378d7ef6c277488cb139add17a66ec43 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=378d7ef6c277488cb139add17a66ec43 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=378d7ef6c277488cb139add17a66ec43 HTTP/1.1" 200 -
+[server] "GET / HTTP/1.1" 200 -
+[server] "GET /api/auth/me HTTP/1.1" 200 -
+[server] "GET /favicon.ico HTTP/1.1" 404 -
+[server] "GET /api/programme HTTP/1.1" 200 -
+[server] "GET /api/catalogue HTTP/1.1" 200 -
+[server] "GET /api/users HTTP/1.1" 200 -
+[server] "GET /api/ping HTTP/1.1" 200 -
+[server] "GET /api/users HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices HTTP/1.1" 200 -
+[server] "POST /api/generate HTTP/1.1" 200 -
+[server] "POST /api/generate HTTP/1.1" 200 -
+[server] "POST /api/generate HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1cddd4c42620423297aec4800d0ed798 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices/remove HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=112b66e2abd64ae6831c6532f5ec1c50 HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices/remove HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=1f87809d22a642929b9e1a5c045b1cd4 HTTP/1.1" 200 -
+[server] "POST /api/programme/exercices/remove HTTP/1.1" 200 -

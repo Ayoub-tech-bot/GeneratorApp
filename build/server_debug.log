@@ -1,0 +1,14 @@
+[server] "GET /api/ping HTTP/1.1" 200 -
+[server] "GET /api/ping HTTP/1.1" 200 -
+[server] "GET /api/ping HTTP/1.1" 200 -
+[server] "POST /api/generate HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=d336ef5d40194025b3ea992d98e7bb22 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=d336ef5d40194025b3ea992d98e7bb22 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=d336ef5d40194025b3ea992d98e7bb22 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=d336ef5d40194025b3ea992d98e7bb22 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=d336ef5d40194025b3ea992d98e7bb22 HTTP/1.1" 200 -
+[server] "GET /api/generate/status?jobId=d336ef5d40194025b3ea992d98e7bb22 HTTP/1.1" 200 -
+[server] "GET / HTTP/1.1" 200 -
+[server] "GET /api/auth/me HTTP/1.1" 200 -
+[server] "GET /api/programme HTTP/1.1" 200 -
+[server] "GET /api/catalogue HTTP/1.1" 200 -
