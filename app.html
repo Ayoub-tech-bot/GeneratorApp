@@ -1267,8 +1267,16 @@ async function api(method, path, body) {
     console.warn("API Error (Demo Mode Bypass):", path);
     if (path.includes('/auth/me')) return { user: { id: 1, username: 'Invite', role: 'admin', schoolName: 'Demo Client' }, usageToday: { tokensUsed: 0, exercisesCount: 0 } };
     if (path.includes('/auth/login')) return { token: 'demo', user: { id: 1, username: 'Invite', role: 'admin', schoolName: 'Demo Client' }, usageToday: { tokensUsed: 0, exercisesCount: 0 } };
-    if (path.includes('/catalogue')) return { catalogue: [] };
-    if (path.includes('/programme')) return { programme: [] };
+    if (path.includes('/catalogue')) return { catalogue: [
+      { key: 'qcm', label: 'Questions à Choix Multiples', variantes: [{ id: 'v1', label: 'Classique (Open edX)', niveaux: ['2AEP', '3AEP', '4AEP'], html: '<div class=\"xblock\"><p>Exemple de QCM</p></div>' }] },
+      { key: 'dragdrop', label: 'Glisser-Déposer', variantes: [{ id: 'v2', label: 'Texte à trous interactif', niveaux: ['4AEP', '5AEP', '6AEP'], html: '<div class=\"xblock\"><p>Exemple de texte à trous</p></div>' }] },
+      { key: 'jsinput', label: 'Composant JSInput personnalisé', variantes: [{ id: 'v3', label: 'Exercice avec animation', niveaux: ['5AEP', '6AEP'], html: '<div class=\"xblock\"><p>Exemple JSInput</p></div>' }] }
+    ] };
+    if (path.includes('/programme')) return { programme: [
+      { id: 'p1', niveau: '3AEP', unite: 'Unité 1 : Le monde des amis', section: 'Grammaire', sujet: 'La phrase (Majuscule, point)', exercices: [{ type: 'qcm', variante: 'Classique (Open edX)', html: '<p>Exercice généré : Identifie la phrase correcte.</p>', status: 'done', modelId: 'v1' }] },
+      { id: 'p2', niveau: '4AEP', unite: 'Unité 2 : La vie culturelle', section: 'Vocabulaire', sujet: 'Les mots de la même famille', exercices: [{ type: 'dragdrop', variante: 'Texte à trous interactif', html: '<p>Exercice généré : Glisse le bon mot dans la phrase.</p>', status: 'done', modelId: 'v2' }] },
+      { id: 'p3', niveau: '5AEP', unite: 'Unité 3 : Les inventions', section: 'Conjugaison', sujet: 'Le passé composé avec être', exercices: [] }
+    ] };
     if (path.includes('/users')) return { users: [] };
     return {};
   }
